@@ -1,3 +1,3 @@
 # Y2K-Website
-A Y2K Themed Personal Website
+I created a Y2K themed personal Myspace inspired website
 https://omskka.github.io/Y2K-Website/
