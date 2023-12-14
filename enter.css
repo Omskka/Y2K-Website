@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.wrapper {
+    border: 1px black solid;
+    padding-top: 40px;
+    width: 1000px;
+    height: 564px;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+.sadcat {
+    height: 564px;
+    width: 564px;
+    float: left;
+    background-image: url(https://o8archive.neocities.org/sadcat.jpg);
+    transform: scaleX(-1);
+}
+
+.enter {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom right, #b927fcb9 0%, #2c90fcb9 25%, #bafd33 50%, #fec837b9 75%, #fd1892b9 100%);
+    border-image-slice: 1;
+    width: 250px;
+    height: 260px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 25px;
+}
+
+.warning {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom right, #b927fcb9 0%, #2c90fcb9 25%, #bafd33 50%, #fec837b9 75%, #fd1892b9 100%);
+    border-image-slice: 1;
+    color: red;
+    background-color: black;
+    width: 275px;
+    height: 250px;
+    margin-right: 105px;
+    float: right;
+}
+
+.enterText {
+    text-decoration: underline;
+}
+
+.enterText:hover {
+    font-size: 200%;
+    cursor: pointer;
+    background-color: black;
+    text-decoration: none;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    border-radius: 50px;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+}
+
+.snowflake,
+.snowflake .inner {
+    animation-iteration-count: infinite;
+    animation-play-state: running
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(110vh)
+    }
+}
+
+@keyframes snowflakes-shake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(80px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    animation-name: snowflakes-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out
+}
+
+.snowflake .inner {
+    animation-duration: 10s;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(0) .inner {
+    animation-delay: 0s
+}
+
+.snowflake:first-of-type {
+    left: 10%;
+    animation-delay: 1s
+}
+
+.snowflake:first-of-type .inner,
+.snowflake:nth-of-type(8) .inner {
+    animation-delay: 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    animation-delay: .5s
+}
+
+.snowflake:nth-of-type(2) .inner,
+.snowflake:nth-of-type(6) .inner {
+    animation-delay: 6s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(11) .inner,
+.snowflake:nth-of-type(3) .inner {
+    animation-delay: 4s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(10) .inner,
+.snowflake:nth-of-type(4) .inner {
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    animation-delay: 3s
+}
+
+.snowflake:nth-of-type(5) .inner {
+    animation-delay: 8s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    animation-delay: 1s
+}
+
+.snowflake:nth-of-type(7) .inner {
+    animation-delay: 2.5s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    animation-delay: 1.5s
+}
+
+.snowflake:nth-of-type(9) .inner {
+    animation-delay: 3s
+}
+
+.snowflake:nth-of-type(10) {
+    left: 25%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(11) {
+    left: 65%;
+    animation-delay: 2.5s
+}
+
+
+/* RESPONSIVE DESIGN */
+
+/*
+@media (max-width: 1200px){
+    body{
+        margin-top: 600px;
+        font-size: 13px;
+        font-family: 'Source Code Pro', monospace;
+        text-align: center;
+        background-image:url(https://o8archive.neocities.org/sadcat.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 550px;
+    }
+    
+    .wrapper{
+        padding-top: 40px;
+        width: 1000px;
+        height: 564px;
+        margin-left: 200px;
+        margin-top: 350px;
+        border: none;
+    }
+    .sadcat{
+        height: 0;
+        width: 0;
+    }
+    .enter{
+        border-image:linear-gradient(to bottom right, #b927fcb9 0%, #2c90fcb9 25%, #bafd33 50%, #fec837b9 75%, #fd1892b9 100%) ;
+        border-image-slice: 1;
+        width: 450px;
+        height: 460px;
+        float: right;
+        margin-top: 30px;
+        margin-right: 305px;
+    }
+    
+    .warning{
+        border: 2px solid transparent;
+        border-image:linear-gradient(to bottom right, #b927fcb9 0%, #2c90fcb9 25%, #bafd33 50%, #fec837b9 75%, #fd1892b9 100%) ;
+        border-image-slice: 1;
+        color: red; 
+        background-color: black;
+        width: 475px;
+        height: 450px;
+        margin-right: 505px;
+        float:right;
+    }
+}
+*/
+
+
+/* MOBILE */
+@media(max-width:576px) {
+    .wrapper {
+        border-style: none;
+        padding-top: 20px;
+        width: 450px;
+        height: 550px;
+        margin-left: 45px;
+        margin-top: 55px;
+        background-image: url(https://o8archive.neocities.org/sadcat.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .sadcat {
+        height: 0px;
+        width: 0px;
+    }
+}
